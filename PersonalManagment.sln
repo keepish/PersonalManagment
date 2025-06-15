@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonalManagment", "PersonalManagment\PersonalManagment.csproj", "{9351FD5F-654B-4438-A7E3-8421191B38EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeviceLayer", "SeviceLayer\SeviceLayer.csproj", "{3064DD4B-14E9-4412-9A8C-4E6A6E6D4FDF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9351FD5F-654B-4438-A7E3-8421191B38EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9351FD5F-654B-4438-A7E3-8421191B38EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9351FD5F-654B-4438-A7E3-8421191B38EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9351FD5F-654B-4438-A7E3-8421191B38EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3064DD4B-14E9-4412-9A8C-4E6A6E6D4FDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3064DD4B-14E9-4412-9A8C-4E6A6E6D4FDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3064DD4B-14E9-4412-9A8C-4E6A6E6D4FDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3064DD4B-14E9-4412-9A8C-4E6A6E6D4FDF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
