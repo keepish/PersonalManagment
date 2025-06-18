@@ -1,0 +1,44 @@
+﻿<Window x:Class="PersonalManagment.EmployeesDetailsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PersonalManagment"
+        mc:Ignorable="d"
+        Title="EmployeesDetailsWindow" Height="350" Width="400">
+    <Grid Margin="10">
+        <StackPanel>
+            <!-- ФИО -->
+            <TextBlock Text="Фамилия:"/>
+            <TextBox x:Name="SurnameBox" Text="{Binding Surname, Mode=TwoWay}" IsReadOnly="True"/>
+
+            <TextBlock Text="Имя:" Margin="0,5,0,0"/>
+            <TextBox x:Name="NameBox" Text="{Binding Name, Mode=TwoWay}" IsReadOnly="True"/>
+
+            <TextBlock Text="Отчество:" Margin="0,5,0,0"/>
+            <TextBox x:Name="PatronymicBox" Text="{Binding Patronymic, Mode=TwoWay}" IsReadOnly="True"/>
+
+            <!-- Дата рождения -->
+            <TextBlock Text="Дата рождения:" Margin="0,5,0,0"/>
+            <DatePicker x:Name="BirthdayPicker" SelectedDate="{Binding Birthday, Mode=TwoWay}" IsEnabled="False"/>
+
+            <!-- Телефон -->
+            <TextBlock Text="Телефон:" Margin="0,5,0,0"/>
+            <TextBox x:Name="PhoneBox" Text="{Binding Phone, Mode=TwoWay}" IsReadOnly="True"/>
+
+            <!-- Email -->
+            <TextBlock Text="Email:" Margin="0,5,0,0"/>
+            <TextBox x:Name="EmailBox" Text="{Binding Email, Mode=TwoWay}" IsReadOnly="True"/>
+
+            <!-- Кнопки -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
+                <Button x:Name="EditButton" Content="Изменить" Click="EditButton_Click" Width="80"/>
+                <Button x:Name="SaveButton" Content="Сохранить" Click="SaveButton_Click" Width="80" Margin="5,0,0,0" Visibility="Collapsed"/>
+                <Button Content="Закрыть" Click="Button_Click" Width="80" Margin="5,0,0,0"/>
+            </StackPanel>
+
+            <!-- Блок ошибок -->
+            <TextBlock x:Name="ErrorText" Foreground="Red" Margin="0,5,0,0" TextWrapping="Wrap"/>
+        </StackPanel>
+    </Grid>
+</Window>

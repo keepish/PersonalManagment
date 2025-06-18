@@ -6,7 +6,28 @@
         xmlns:local="clr-namespace:PersonalManagment"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBlock Text="Поиск:" VerticalAlignment="Bottom" Margin="5"/>
+            <TextBox Width="300" Margin="5" x:Name="SearchTextBox" TextChanged="SearchTextBox_TextChanged" HorizontalAlignment="Center"/>
+        </StackPanel>
 
-    </Grid>
+        <ListView x:Name="EmployeesListView" ItemsSource="{Binding Employees}" HorizontalAlignment="Center" ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="5" SelectionChanged="EmployeesListView_SelectionChanged">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderBrush="Aqua" BorderThickness="1" Padding="10" Margin="5" Width="400">
+                        <StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding FullName}"/>
+                            </StackPanel>
+                            <TextBlock Text="{Binding Position.Name}"/>
+                            <TextBlock Text="{Binding Department.Name}"/>
+                            <TextBlock Text="{Binding Phone}"/>
+                            <TextBlock Text="{Binding Email}"/>
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </DockPanel>
 </Window>

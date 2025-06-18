@@ -23,4 +23,16 @@ public partial class Employee
     public virtual Department Department { get; set; } = null!;
 
     public virtual Position Position { get; set; } = null!;
+
+    public string FullName
+    {
+        get
+        {
+            var parts = new List<string> { Surname, Name };
+            if (!string.IsNullOrWhiteSpace(Patronymic))
+                parts.Add(Patronymic);
+
+            return string.Join(" ", parts);
+        }
+    }
 }
